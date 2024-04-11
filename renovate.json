@@ -2,5 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update renovate-tryout references",
+      "fileMatch": ["^README\\.md$"],
+      "matchStrings": [
+        "https:\/\/github\\.com\/jan-kraemer\/renovate-tryout\/(?<currentValue>v[0-9.]+)\/docs"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "renovate-tryout",
+      "packageNameTemplate": "jan-kraemer/renovate-tryout",
+      "versioningTemplate": "semver"
+
+    }
   ]
 }
