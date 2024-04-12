@@ -7,7 +7,7 @@
     {
       "customType": "regex",
       "description": "Update renovate-tryout references",
-      "fileMatch": ["README.md"],
+      "fileMatch": ["^README\\.md$"],
       "matchStrings": [
         "https://github\\.com/jan-kraemer/renovate-tryout/(?<currentValue>v[0-9.]+)/docs/"
       ],
