@@ -9,7 +9,7 @@
       "description": "Update renovate-tryout references",
       "fileMatch": ["^README\\.md$"],
       "matchStrings": [
-        "https://github\\.com/jan-kraemer/renovate-tryout/(?<currentValue>v[0-9.]+)/docs/"
+        "https://github\\.com/jan-kraemer/renovate-tryout/(?<currentValue>v[0-9.]+)/docs(|/)"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "renovate-tryout",
