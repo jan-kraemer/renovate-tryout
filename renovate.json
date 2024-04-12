@@ -9,13 +9,23 @@
       "description": "Update renovate-tryout references",
       "fileMatch": ["README.md"],
       "matchStrings": [
-        "https://github\\.com/jan-kraemer/renovate-tryout/(?<currentValue>v[0-9.]+)/docs"
+        "https://github\\.com/jan-kraemer/renovate-tryout/(?<currentValue>v[0-9.]+)/docs/"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "renovate-tryout",
       "packageNameTemplate": "jan-kraemer/renovate-tryout",
       "versioningTemplate": "semver"
-
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^\\.sdkmanrc$"
+      ],
+      "matchStrings": [
+        "java=(?<currentValue>.*)\\n"
+      ],
+      "datasourceTemplate": "java-version",
+      "depNameTemplate": "java"
     }
   ]
 }
